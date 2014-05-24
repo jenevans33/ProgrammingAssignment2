@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions will store (set) and return (get) a square matrix
+## They will also store (setinv) and return (getinv) the inverse of same
 
-## Write a short comment describing this function
+## makeCacheMatrix gets and sets the value of the matrix and its inverse
+## it needs these values provided to it for caching
 
 makeCacheMatrix <- function(x = matrix()) {
     #set the value of the matrix & inverse
@@ -21,7 +22,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## CacheSolve will solve for the inverse of a matrix when called initially
+## and will store it using the internal setinv function of the x object
+## once initially stored cacheSolve will return a cached version versus recalc
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
